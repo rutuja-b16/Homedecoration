@@ -12,6 +12,6 @@ private serverurl="http://localhost:8080/admin"
 
   login(e:any,p:any):Observable<Adminlog[]>
   {
-    return this.http.get<Adminlog[]>(this.serverurl+"/"+e+"/"+p)
+    return this.http.get<Adminlog[]>(this.serverurl+"/login/"+e+"/"+p)
   }
 }

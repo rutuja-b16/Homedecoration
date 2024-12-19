@@ -1,1 +1,13 @@
-<p>feedback works!</p>
+
+<div class="container">
+    <h1 class="text-center">Valuable Feedback</h1>
+    <form (ngSubmit)="submitdata()">
+      
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea type="text" class="form-control" id="message" name="message" placeholder="Enter message " [(ngModel)]="fd.message"></textarea>
+      </div>
+      
+      <button type="submit" class="btn btn-info">Submit</button>
+    </form>
+    </div>

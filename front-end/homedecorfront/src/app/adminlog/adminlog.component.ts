@@ -21,9 +21,10 @@ submitdata(){
 this.admserv.login(this.adm.emailid,this.adm.password).subscribe(data=>{
   if(data.length>0)
   {
+    alert("Adminlogin successful")
     localStorage.setItem("usertype","admin")
     this.router.navigate(["/"])
-    alert()
+   
   }
 })
 }

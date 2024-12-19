@@ -16,5 +16,9 @@ serverurl="http://localhost:8080/registration"
  {
   return this.http.post<Registration>(this.serverurl+"/addreg",r)
  }
+ login(e:any,p:any):Observable<Registration[]>
+ {
+    return this.http.get<Registration[]>(this.serverurl+"/login/"+e+"/"+p)
+ }
 }
 
