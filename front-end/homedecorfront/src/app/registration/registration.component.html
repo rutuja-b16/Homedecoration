@@ -1,0 +1,45 @@
+<div class="container">
+<form (ngSubmit)="submitdata()">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name "[(ngModel)]="reg.name">
+  </div>
+  <div class="form-group">
+    <label for="address">Address:</label>
+    <textarea type="text" class="form-control" id="address" name="address" placeholder="Enter address " [(ngModel)]="reg.address"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="city">City:</label>
+    <select class="form-control" for="city" [(ngModel)]="reg.city">
+       <option value="">---select----</option>
+       <option>Satara</option>
+       <option>Pune</option>
+       <option>Mumbai</option>
+    </select>
+  </div>
+  <br>
+  <label for="gender">Gender</label>
+  <div class="radio">
+    <label><input type="radio" name="gender" value="Male" [(ngModel)]="reg.gender">Male</label>
+  </div>
+  <div class="radio">
+    <label><input type="radio" name="gender" value="Female"  [(ngModel)]="reg.gender">Female</label>
+  </div>
+  <div class="radio ">
+    <label><input type="radio" name="gender" value="Other" [(ngModel)]="reg.gender">Other</label>
+  </div>
+  <div class="form-group">
+    <label for="contact">Contact:</label>
+    <input type="tel" class="form-control" id="contact" name="contact" placeholder="Enter Contact No"  [(ngModel)]="reg.contact">
+  </div>
+  <div class="form-group">
+    <label for="emailid">Email address:</label>
+    <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Enter Email-Id"  [(ngModel)]="reg.emailid">
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"  [(ngModel)]="reg.password">
+  </div>
+  <button type="submit" class="btn btn-info">Submit</button>
+</form>
+</div>
