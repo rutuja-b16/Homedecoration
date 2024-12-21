@@ -9,6 +9,8 @@ import { AdminlogComponent } from './adminlog/adminlog.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { ManagetemplateComponent } from './managetemplate/managetemplate.component';
+import { ManagecustomizedComponent } from './managecustomized/managecustomized.component';
+import { CustomizedComponent } from './customized/customized.component';
 
 export const routes: Routes = [
     {path:'',component:HomeComponent},
@@ -20,5 +22,9 @@ export const routes: Routes = [
     {path:'adminlog',component:AdminlogComponent},
     {path:'aboutus',component:AboutusComponent},
     {path:'feedback',component:FeedbackComponent},
-    {path:'managetemplate',component:ManagetemplateComponent}
+    {path:'managetemplate',component:ManagetemplateComponent},
+    {path:'managecustomized',component:ManagecustomizedComponent},
+    {path:'customize',component:CustomizedComponent}
+
+
 ];

@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <h3 style="font-family: Georgia, 'Times New Roman', Times, serif; color: rgb(182, 115, 29); text-align: center;"><b>You can Customize your designs here</b></h3>
+    <h2 style="color:rgb(101, 64, 17) ; text-align: center;font-family: Georgia, 'Times New Roman', Times, serif ">Add your Images</h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <h4 style="color:rgb(10, 10, 10) ;">Enter which Template you want eg:-Hall Template </h4><br>
+            <label for="name">Template Name:</label>
+            <input type="text" class="form-control" id="firstName" required [(ngModel)]="customized.custname"
+                name="custname">
+        </div>
+
+       
+
+        
+        <div class="form-group">
+            <label for="name">Template Image:</label>
+            <input type="file" class="form-control" id="password" required multiple value="select"
+                (change)="onFileSelected($event)">
+            <div class="row">
+                <div *ngFor="let file of customized.custImages;let i =index" class="col-sm-2">
+                    <span class="close" (click)="removeImage(i)">x</span>
+                    <img [src]="file.url" alt="" width="100px" height="100px">
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
