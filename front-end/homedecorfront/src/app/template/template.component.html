@@ -1,1 +1,17 @@
-<p>template works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let c of templates">
+            <div class="thumbnail">
+                <img src="http://localhost:8080/project/downloadFile/{{c.tempImages[0].name}}">
+                <div class="caption">
+                    <h3>template name: {{c.tempname}}</h3>
+                    <div [hidden]="!login">
+                        <input type="button" value="Download Now" class="btn btn-primary"  (click)="download(c.id)"><a href="http://localhost:8080/project/downloadFile/{{c.tempImages[0].name}}"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+ </div>
+</div>
